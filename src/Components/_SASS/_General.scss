@@ -1,0 +1,66 @@
+@import './CrossBrowser';
+
+//BUTTONS
+//SOCIAL BUTTON
+@mixin social-btn($minWidth, $primary-color, $secondary-color){
+    @include borderRadius(9999px);
+    padding: 5px 10px;
+    border: 2px solid;
+    min-width: $minWidth;
+    font-size: .7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $secondary-color;
+    border-color: $primary-color;
+    background-color: $primary-color;
+    margin-bottom: 0.5rem;
+    &:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
+        a{
+            color: $primary-color;
+        }
+    }
+    i{
+        margin-right: 1rem;
+        font-weight: 1000;
+    }
+    a{
+        text-decoration: none;
+        color: $secondary-color;
+    }
+}
+//GENERAL BUTTON
+@mixin generic-btn($primary-color, $secondary-color){
+    @include borderRadius(2px);
+    padding: 2px 10px;
+    border: 2px solid;
+    // text-transform: uppercase;
+    color: $secondary-color;
+    border-color: $primary-color;
+    background-color: $primary-color;
+    margin-bottom: 0.5rem;
+    font-size: .9rem;
+    font-weight: 800;
+    &:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+    i{
+        margin-right: 1rem;
+        font-weight: 1000;
+    }
+}
+
+@mixin inputTextGeneral($outline-color){
+    padding: 8px 20px;
+    @include borderRadius(5px);
+    border: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    outline: none;
+    &:focus{
+        box-shadow: 0px 0px 0px 2px $outline-color;
+    }
+}

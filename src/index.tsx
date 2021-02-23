@@ -3,12 +3,18 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+//REDUX IMPORTS
 import { Provider } from "react-redux";
 import { reduxStore } from "./Store/index";
 
+//PERSONAL COMPONENTS IMPORTS
+import RouterWeb from "./Components/_Main/0.RouterWeb/RouterWeb";
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={reduxStore}></Provider>
+    <Provider store={reduxStore}>
+      <RouterWeb />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

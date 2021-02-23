@@ -1,0 +1,32 @@
+@import '../../../../_SASS/CrossBrowser';
+@import '../../../../_SASS/General';
+
+.sign-in{
+    .checkStaff{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem;
+        label, input{
+            width: auto !important;
+            margin: 0;
+            margin-bottom: 0 !important;
+            margin-right: 1rem;
+        }
+    }
+    button{
+        @include generic-btn(#01ff84, #1d1d1d);
+        font-size: 1.1rem;
+    }
+    p{
+        text-align: left;
+        width: 100%;
+        font-size: .8rem;
+        color: rgba(255, 255, 255, .5);
+        &:hover{
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+        }  
+    }
+}
